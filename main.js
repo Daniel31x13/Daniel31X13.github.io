@@ -112,4 +112,4 @@ aboutMeButton.addEventListener('click', ()=> {
   });
 })
 
-alert('Still Under development...')
+alert('Under development...')
