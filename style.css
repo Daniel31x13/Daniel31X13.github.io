@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: rgb(39, 39, 39);
+    font: normal 75% Arial, Helvetica, sans-serif;
+    color: white;
+} 
+
+#tsparticles {
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.heading {
+    color: white;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    text-align: center;
+    display: table;
+}
+
+.heading-content {
+    display: table-cell; 
+    vertical-align: middle; 
+}
+
+.heading-content h2 {
+    font-size: 2rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#about-me-btn {
+    box-shadow: rgba(0, 255, 255, 0.4) 0px 5px, rgba(0, 255, 255, 0.3) 0px 10px, rgba(0, 255, 255, 0.2) 0px 15px, rgba(0, 255, 255, 0.1) 0px 20px, rgba(0, 255, 255, 0.05) 0px 25px;
+    -webkit-user-select: none;   
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Righteous', cursive;
+    font-size: 1.7em;
+    color: rgb(255, 255, 255);
+    border: solid;
+    border-color: azure;
+    background-color: transparent;
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    transition: box-shadow 0.3s, background-color 0.2s;
+}
+
+#about-me-btn:hover {
+    background-color: #00b3b3;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.body {
+    background: rgb(0,0,195);
+    background: radial-gradient(circle, rgba(0,0,195,1) 0%, rgba(1,1,168,1) 10%, rgba(0,0,139,1) 20%, rgba(0,0,47,1) 100%); 
+}
+
+.about-section {
+
+}
+
+.about-section h2 {
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    font-size: 3em;
+}
+
+.profile-pic {
+    width: 30%;
+    border-radius: 100%;
+}
+
+.about-me-card {
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Annie Use Your Telescope', cursive;    
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.about-me-card ul {
+    list-style-type: none;
+}
+
+.about-text {
+
+}
