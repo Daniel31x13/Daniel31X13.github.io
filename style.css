@@ -1,7 +1,7 @@
 body {
     margin: 0;
     width: 100%;
-    background-color: rgb(39, 39, 39);
+    background-color: #1a1a1a;
     font: normal 75% Arial, Helvetica, sans-serif;
     color: white;
 } 
@@ -30,7 +30,7 @@ body {
 
 .heading-content h2 {
     font-size: 2rem;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Courier Prime', monospace;
 }
 
 #about-me-btn {
@@ -57,27 +57,24 @@ body {
     box-shadow: none;
 }
 
-.body {
-    background: rgb(0,0,195);
-    background: radial-gradient(circle, rgba(0,0,195,1) 0%, rgba(1,1,168,1) 10%, rgba(0,0,139,1) 20%, rgba(0,0,47,1) 100%); 
+.body { 
+    background-color: #1d1d1d;
 }
 
-.about-section {
-
-}
-
-.about-section h2 {
-    font-family: 'Righteous', cursive;
+.body h2 {
+    font-family: 'Courier Prime', monospace;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .profile-pic {
-    width: 30%;
+    width: 25%;
+    height: 25%;
     border-radius: 100%;
+    max-width: 300px;
 }
 
-.about-me-card {
+.about-section {
     font-size: 2em;
     font-weight: 600;
     font-family: 'Annie Use Your Telescope', cursive;    
@@ -85,10 +82,36 @@ body {
     justify-content: space-evenly;
 }
 
-.about-me-card ul {
+.about-section ul {
     list-style-type: none;
 }
 
-.about-text {
+#myProgress {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-radius: 20px;
+    background-color: #808080;
+}
 
+#myBar {
+    font-weight: bolder;
+    border-radius: 20px;
+    width: 10%;
+    height: 30px;
+    background: linear-gradient(to left,rgb(253, 2, 140),rgb(240, 199, 230));
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    box-shadow: 0 0 3px -5px rgb(253, 2, 140), 0px 3px 40px rgb(253, 2, 140);
+}
+
+.skill-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skill {
+    text-align: center;
 }
