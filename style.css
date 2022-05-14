@@ -91,7 +91,7 @@ body {
 }
 
 .about-section ul {
-    list-style-type: none;
+    list-style-type: "# ";
 }
 
 .skill-section {
