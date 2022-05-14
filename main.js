@@ -113,7 +113,6 @@ aboutMeButton.addEventListener('click', ()=> {
   });
 })
 
-<<<<<<< HEAD
 
 // Typewriter effect
 new Typewriter('#element', {
@@ -125,7 +124,6 @@ new Typewriter('#element', {
 
 
 // Progress bar
-
 function startProgressBar(amount) {
   let i = 0;
   if (i == 0) {
@@ -146,7 +144,6 @@ function startProgressBar(amount) {
   }
 }
 
-// startProgressBar()
 
 const skillSection = document.querySelector(".skill-section");
 
@@ -186,6 +183,3 @@ skillSection.addEventListener("mouseover", (e) => {
 // }, { threshold: [1] });
 
 // observer.observe(document.querySelector(".myBar"));
-=======
-alert('Under development...')
->>>>>>> 0021be1723fec028279730beb64d5ce6f0f51b2d
