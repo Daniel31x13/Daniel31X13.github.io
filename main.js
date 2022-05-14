@@ -113,6 +113,7 @@ aboutMeButton.addEventListener('click', ()=> {
   });
 })
 
+<<<<<<< HEAD
 
 // Typewriter effect
 new Typewriter('#element', {
@@ -185,3 +186,6 @@ skillSection.addEventListener("mouseover", (e) => {
 // }, { threshold: [1] });
 
 // observer.observe(document.querySelector(".myBar"));
+=======
+alert('Under development...')
+>>>>>>> 0021be1723fec028279730beb64d5ce6f0f51b2d
