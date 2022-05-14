@@ -116,65 +116,10 @@ aboutMeButton.addEventListener('click', ()=> {
 
 // Typewriter effect
 new Typewriter('#element', {
-  strings: ['RESPONSIVE', 'DYNAMIC', 'FAST'],
+  strings: ['RESPONSIVE', 'DYNAMIC', 'FAST', 'ASTONISHING'],
   autoStart: true,
   loop: true,
   cursor: "|"
-});
-
-
-// Progress bar
-function startProgressBar(amount) {
-  let i = 0;
-  if (i == 0) {
-    i = 1;
-    const elem = document.querySelector("#myBar");
-    let width = 20;
-    const id = setInterval(frame, 10);
-    function frame() {
-      if (width >= amount) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width = width+10;
-        elem.style.width = width + "%";
-        elem.innerHTML = width  + "%";
-      }
-    }
-  }
-}
-
-
-const skillSection = document.querySelector(".skill-section");
-
-skillSection.addEventListener("mouseover", (e) => {
-  let logo = e.target.id;
-
-  switch (logo) {
-    case 'js-logo':
-      startProgressBar(80);
-      break;
-    case 'express-logo':
-      startProgressBar(70);
-      break;
-    case 'react-logo':
-      startProgressBar(75);
-      break;
-    case 'node-logo':
-      startProgressBar(70);
-      break;
-    case 'linux-logo':
-      startProgressBar(60);
-      break;
-    case 'html-logo':
-      startProgressBar(80);
-      break;
-    case 'css-logo':
-      startProgressBar(75);
-      break;
-    default:
-      break;
-  }
 });
 
 // const observer = new IntersectionObserver(function(entries) {
