@@ -136,7 +136,7 @@ function startProgressBar(amount) {
         clearInterval(id);
         i = 0;
       } else {
-        width = width+5;
+        width = width+10;
         elem.style.width = width + "%";
         elem.innerHTML = width  + "%";
       }

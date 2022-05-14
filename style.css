@@ -80,6 +80,7 @@ body {
     font-family: 'Annie Use Your Telescope', cursive;    
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .about-section ul {
@@ -89,7 +90,7 @@ body {
 #myProgress {
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 50%;
     border-radius: 20px;
     background-color: #808080;
 }
