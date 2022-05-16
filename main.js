@@ -106,11 +106,9 @@ tsParticles.load("tsparticles", {
 // About me button
 const aboutMeButton = document.getElementById('about-me-btn');
 const height = window.innerHeight;
+const view = document.getElementById("view");
 aboutMeButton.addEventListener('click', ()=> {
-  window.scroll({
-    top: height,
-    behavior: "smooth"
-  });
+  view.scrollIntoView({behavior: "smooth"})
 })
 
 
@@ -121,6 +119,62 @@ new Typewriter('#element', {
   loop: true,
   cursor: "|"
 });
+
+
+// Scroll indicator
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("scroll-bar").style.width = scrolled + "%";
+}
+
+
+// Scroll to top
+const showOnPx = 100;
+const backToTopButton = document.querySelector(".back-to-top");
+
+const scrollContainer = () => {
+  return document.documentElement || document.body;
+};
+
+const goToTop = () => {
+document.body.scrollIntoView({
+  behavior: "smooth"
+});
+};
+
+document.addEventListener("scroll", () => {
+
+  const scrolledPercentage =
+    (scrollContainer().scrollTop /
+      (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
+    100;
+
+  if (scrollContainer().scrollTop > showOnPx) {
+    backToTopButton.classList.remove("hidden");
+  } else {
+    backToTopButton.classList.add("hidden");
+  }
+});
+
+backToTopButton.addEventListener("click", goToTop);
+
+
+// Loader
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+      document.body.style.visibility = "hidden";
+      document.querySelector("#loader").style.visibility = "visible";
+      document.querySelector(".loader-overlay").style.visibility = "visible";
+  } else {
+      document.querySelector("#loader").style.display = "none";
+      document.querySelector(".loader-overlay").style.visibility = "hidden";
+      document.body.style.visibility = "visible";
+  }
+};
 
 // const observer = new IntersectionObserver(function(entries) {
 // 	if(entries[0].isIntersecting === true)

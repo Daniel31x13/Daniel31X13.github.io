@@ -12,19 +12,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Courier+Prime&family=Righteous&display=swap" rel="stylesheet"> 
  </head>
 <body>
+    <div class="loader-overlay"><div id="loader" class="center"></div></div>
+
+    <div class="indicator">
+        <div class="progress-container">
+            <div class="progress-bar" id="scroll-bar"></div>
+        </div>  
+    </div>
+
+    <button class="back-to-top hidden">
+        <span style="font-size: 2em;" class="material-symbols-outlined">arrow_upward</span>
+    </button>
+      
     <div id="tsparticles"></div>
     <div class="heading">
         <div class="heading-content">
-            <h2>Hello there! I'm <span style="color: #00ffff;">Daniel 31X13</span>.</h2>
+            <h2>Hello there! I'm <span style="color: #00ffff;">Daniel31X13</span>.</h2>
             <h2>I'm a full-stack developer.</h2>
             <h3>I create,</h3><h3> <span id="element"></span>websites.</h3>
-            <button id="about-me-btn"><p>About me</p> <span style="font-size: 2em;" class="material-symbols-outlined">expand_more</span></button>
+            <button id="about-me-btn"><p>About me</p><span style="font-size: 2em;" class="material-symbols-outlined">expand_more</span></button>
         </div>
     </div>
-
     <div class="body">
-
-        <hr>
+        <hr id="view">
         <br>
         
         <h1>About Me:</h1>
@@ -154,10 +164,26 @@
 
         <hr>
 
-        
+        <h1>Get In Touch:</h1>
+        <br>
+        <div class="contact-section">
+            <h2 style="font-family: 'Annie Use Your Telescope', cursive;">If you'd like to get in touch, either for business inquiry or just to say hi, here are the ways to reach me:</h2>
+            <br>
+
+            <div class="contact-methods">
+                <a class="contact-btn email-btn" href="mailto:daniel31x13@gmail.com"><i class="fa fa-envelope" style="font-size: 2em; margin-right: 10px;"></i> Daniel31X13@gmail.com</a>
+                <a class="contact-btn twitter-btn" href="https://mobile.twitter.com/daniel31x13"><i class="fa fa-twitter" style="font-size: 2em; margin-right: 10px;"></i> Twitter</a>
+                <a class="contact-btn linkedin-btn" href="https://linkedin.com/in/daniel192"><i class="fa fa-linkedin" style="font-size: 2em; margin-right: 10px;"></i> LinkedIn</a>
+                <a class="contact-btn github-btn" href="https://github.com/Daniel31x13"><i class="fa fa-github" style="font-size: 2em; margin-right: 10px;"></i> GitHub</a>
+            </div>
+        </div>
+        <br>        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.7.1/dist/tsparticles.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="main.js"></script>
 </body>
+
+<p style="text-align: center;">Copyright © <script>document.write(new Date().getFullYear())</script> Daniel 31X13</p>
+
 </html>
