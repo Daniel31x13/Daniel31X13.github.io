@@ -175,10 +175,3 @@ document.onreadystatechange = function() {
       document.body.style.visibility = "visible";
   }
 };
-
-// const observer = new IntersectionObserver(function(entries) {
-// 	if(entries[0].isIntersecting === true)
-//   console.log("RUNNING COMMAND")
-// }, { threshold: [1] });
-
-// observer.observe(document.querySelector(".myBar"));
