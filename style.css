@@ -23,7 +23,9 @@
     }
     
     .project {
-        line-height: 25px;
+        display: flex;
+        flex-direction: column;
+        line-height: 20px;
         background-color: rgb(60, 60, 60);
         margin: 10px;
         width: 30%;
@@ -41,8 +43,8 @@ body {
     background-color: #1a1a1a;
     font: normal 75% Arial, Helvetica, sans-serif;
     color: white;
-} 
-
+    transition: background-color 0.2s, color 0.2s;
+}
 
 /* Heading */
 #tsparticles {
@@ -101,6 +103,7 @@ body {
 }
 
 .body { 
+    transition: background-color 0.2s, color 0.2s;
     background-color: #1d1d1d;
 }
 
@@ -119,8 +122,8 @@ body {
 
 /* About */
 .profile-pic {
-    width: 30%;
-    height: 30%;
+    width: 40%;
+    height: 40%;
     border-radius: 100%;
     max-width: 300px;
 }
@@ -164,7 +167,9 @@ body {
     z-index:99999999;
     box-sizing:border-box;
     box-shadow:0 1px 8px rgba(0,0,0,0.5);
-    visibility:hidden; opacity:0; transition:opacity 0.5s;
+    visibility:hidden; 
+    opacity:0; 
+    transition: opacity 0.5s;
 }
 
 .tooltip:hover .top {
@@ -187,7 +192,7 @@ body {
     width:12px;
     height:12px;
     left:50%;
-    transform:translate(-50%,-50%) rotate(45deg);
+    transform: translate(-50%,-50%) rotate(45deg);
     background-color:#444444;
     box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
@@ -235,7 +240,7 @@ body {
 }
 
 .project-text {
-    padding: 0px 15px 20px 15px;
+    padding: 0px 15px 10px 15px;
     font-family: 'Courier Prime', monospace;
 }
 
@@ -252,7 +257,16 @@ body {
     color: black;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    transition: opacity 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.project-btn:active {
+    box-shadow: none;
+}
+
+.project-btn:hover {
+    opacity: 0.8;
 }
 
 .project-btn * {
@@ -279,11 +293,21 @@ body {
 }
 
 .contact-btn {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     font-size: larger;
     text-decoration: none;
     padding: 15px;
     border-radius: 5px;
     display: table;
+    transition: opacity 0.3s;
+}
+
+.contact-btn:hover {
+    opacity: 0.8;
+}
+
+.contact-btn:active {
+    box-shadow: none;
 }
 
 .contact-btn * {
@@ -291,6 +315,8 @@ body {
 }
 
 .email-btn {
+    margin-left: auto;
+    margin-right: auto;
     color: white;
     background-color: rgb(70, 70, 221);
 }
@@ -331,27 +357,6 @@ body {
 }
 
 
-/* Back to top */
-.back-to-top {
-    z-index: 10;
-    color: white;
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    border-radius: 100%;
-    background: #00b3b3;
-    padding: 0.5rem;
-    border: none;
-    cursor: pointer;
-    opacity: 100%;
-    transition: opacity 0.5s;
-}
-
-.hidden {
-    opacity: 0%;
-}
-
-
 /* Loader */
 #loader {
     z-index: 101;
@@ -385,4 +390,64 @@ body {
     left: 0;
     right: 0;
     margin: auto;
+}
+
+
+/* Back to top */
+.back-to-top {
+    z-index: 10;
+    color: white;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    border-radius: 100%;
+    background: #00b3b3;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.hidden {
+    opacity: 0%;
+}
+
+
+/* Light mode support */
+.toggle {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    opacity: 100%;
+    transition: background-color 0.5s, opacity 0.3s;
+}
+
+.toggle:hover {
+    opacity: 0.8;
+}
+
+.toggle:active {
+    box-shadow: none;
+}
+
+body.light .toggle {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.light .body {
+    background: rgb(247, 247, 247);
+    color: rgb(45, 45, 45);
+}
+
+body.light .project {
+    background: rgb(235, 235, 235);
 }
